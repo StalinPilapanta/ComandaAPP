@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:text="Login"
+        android:textAlignment="center"
+        android:textColor="#DD3504"
+        android:textStyle="bold"
+        android:paddingVertical="60dp"
+        android:textSize="60dp"
+        android:fontFamily="cursive"
+        android:background="@drawable/fondo1"
+        android:layout_marginBottom="25dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/edtUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="20dp"
+        android:hint="User" />
+
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="30dp"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/button_bg"
+        android:text="Login"
+        android:textColor="#fafafa" />
+    <TextView
+        android:id="@+id/txtCrear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No tienes cuenta, Crea una ahora"
+        android:textStyle="italic"
+        android:textAlignment="center"/>
+</LinearLayout>
