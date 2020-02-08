@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5px"
         android:hint="User" />
 
 
@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="5px"
         android:hint="Password"
         android:inputType="textPassword" />
 
@@ -49,6 +49,9 @@
         android:background="@drawable/button_bg"
         android:text="Login"
         android:textColor="#fafafa" />
+
+
+
     <TextView
         android:id="@+id/txtCrear"
         android:layout_width="match_parent"
