@@ -77,4 +77,20 @@
         android:text="Guardar"
         android:textColor="#fafafa" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#DD3504"
+        android:textStyle="bold"
+        android:text="Lista de personas"
+        android:textAlignment="center"
+        android:padding="15dp"
+        android:textSize="25dp"/>
+
+    <ListView
+        android:id="@+id/lvDatosPersonas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </LinearLayout>

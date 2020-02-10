@@ -65,11 +65,11 @@ import android.widget.Toast;
         public void Ingresar(View v){
             String userF = user.getText().toString();
             String passF = password.getText().toString();
-            if(userF.equals("Stalin") && passF.equals("est.uisrael.2019")){
-                //ntent vista2 =  new Intent(MainActivity.this,actividad2.class);
+            if(userF.equals("Stalin") && passF.equals("stalin")){
+                Intent pedidos =  new Intent(MainActivity.this, com.home.comandaapp.pedidos.class);
                 //vista2.putExtra("datoUser",userF);
                 Toast.makeText(getApplicationContext(), "Ingreso Exitoso",Toast.LENGTH_LONG).show();
-                //startActivity(vista2);
+                startActivity(pedidos);
             }else{
                 Toast.makeText(getApplicationContext(), "Error al ingresar",Toast.LENGTH_SHORT).show();
             }

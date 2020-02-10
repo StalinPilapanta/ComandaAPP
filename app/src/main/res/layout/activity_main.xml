@@ -47,6 +47,7 @@
         android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="25dp"
         android:background="@drawable/button_bg"
+        android:onClick="Ingresar"
         android:text="Login"
         android:textColor="#fafafa" />
 

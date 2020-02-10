@@ -4,8 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
@@ -20,13 +24,16 @@ import java.util.List;
 
 public class listar_personas extends AppCompatActivity {
 
+
     private List<Personas> listPerson = new ArrayList<Personas>();
     ArrayAdapter<Personas> arrayAdapterPersona;
     ListView lvListarPersonas;
 
-
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+
+    Personas personaSelected;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +43,14 @@ public class listar_personas extends AppCompatActivity {
         lvListarPersonas = findViewById(R.id.lvDatosPersonas);
         inicializarFirebase();
         listarDatos();
+
+        lvListarPersonas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                personaSelected = (Personas) parent.getItemAtPosition(position);
+                Toast.makeText(getApplicationContext(), "Seleccionado",Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
