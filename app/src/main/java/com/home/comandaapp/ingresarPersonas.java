@@ -3,6 +3,7 @@ package com.home.comandaapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -68,8 +69,10 @@ public class ingresarPersonas extends AppCompatActivity {
             databaseReference.child("Personas").child(p.getUid()).setValue(p);
             Toast.makeText( ingresarPersonas.this, "Usuario Ingresado",Toast.LENGTH_SHORT).show();
             limpiarCajas();
-        }
 
+            Intent actPrincipal =  new Intent(ingresarPersonas.this,MainActivity.class);
+            startActivity(actPrincipal);
+        }
 
     }
 
