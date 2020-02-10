@@ -51,17 +51,49 @@ public class ingresarPersonas extends AppCompatActivity {
         String nick = username.getText().toString();
         String pwd = password.getText().toString();
 
-        Personas p = new Personas();
-        p.setUid(UUID.randomUUID().toString());
-        p.setNombre(name);
-        p.setApellidos(lasName);
-        p.setCedula(ci);
-        p.setEmail(correo);
-        p.setUsername(nick);
-        p.setPassword(pwd);
-        databaseReference.child("Personas").child(p.getUid()).setValue(p);
-        Toast.makeText( ingresarPersonas.this, "Usuario Ingresado",Toast.LENGTH_SHORT).show();
-        limpiarCajas();
+
+        if (name.equals("")||lasName.equals("")||ci.equals("")||correo.equals("")||nick.equals("")||pwd.equals("")){
+            validacion();
+
+        }else{
+
+            Personas p = new Personas();
+            p.setUid(UUID.randomUUID().toString());
+            p.setNombre(name);
+            p.setApellidos(lasName);
+            p.setCedula(ci);
+            p.setEmail(correo);
+            p.setUsername(nick);
+            p.setPassword(pwd);
+            databaseReference.child("Personas").child(p.getUid()).setValue(p);
+            Toast.makeText( ingresarPersonas.this, "Usuario Ingresado",Toast.LENGTH_SHORT).show();
+            limpiarCajas();
+        }
+
+
+    }
+
+    private void validacion() {
+
+        String name = nombres.getText().toString();
+        String lasName = apellidos.getText().toString();
+        String ci = cedula.getText().toString();
+        String correo = email.getText().toString();
+        String nick = username.getText().toString();
+        String pwd = password.getText().toString();
+        if (name.equals("")){
+            nombres.setError("Required");
+        }else if(lasName.equals("")){
+            apellidos.setError("Required");
+        }else if(ci.equals("")){
+            cedula.setError("Required");
+        }else if(correo.equals("")){
+            email.setError("Required");
+        }else if(nick.equals("")){
+            username.setError("Required");
+        }else if (pwd.equals("")){
+            password.setError("Required");
+        }
     }
 
     private void inicializarFirebase(){
