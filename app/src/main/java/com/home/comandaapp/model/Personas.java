@@ -11,6 +11,9 @@ public class Personas {
     private String password;
 
 
+    public Personas(){
+
+    }
 
     public String getUid() {
         return uid;
