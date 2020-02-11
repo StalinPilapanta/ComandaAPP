@@ -8,13 +8,15 @@
         android:title="Item"
         app:showAsAction="always" />
     <item
-        android:title="Item"
         android:id="@+id/icon_save"
+        android:checkable="false"
         android:icon="@drawable/ic_save"
+        android:title="Item"
         app:showAsAction="always"/>
 
     <item
         android:id="@+id/icon_delete"
+        android:checkable="false"
         android:icon="@drawable/ic_delete"
         android:title="Item"
         app:showAsAction="always" />
