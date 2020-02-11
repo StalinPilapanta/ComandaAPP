@@ -72,7 +72,7 @@ public class ingresarPersonas extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        setContentView(R.layout.activity_ingresar_personas);
+        getMenuInflater().inflate(R.menu.menu_main,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
