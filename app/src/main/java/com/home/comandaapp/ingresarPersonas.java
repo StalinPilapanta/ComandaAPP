@@ -53,7 +53,7 @@ public class ingresarPersonas extends AppCompatActivity {
         username = findViewById(R.id.edtUsername);
         password = findViewById(R.id.edtPassword);
 
-        guardar = findViewById(R.id.btnGuardarPersonas);
+        guardar = findViewById(R.id.btnPedidos);
 
         inicializarFirebase();
 

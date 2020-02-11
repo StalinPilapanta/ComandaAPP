@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".pedidos">
 
     <TextView
@@ -17,5 +18,31 @@
         android:padding="15dp"
         android:textSize="25dp"/>
 
+    <Button
+        android:id="@+id/btnPedidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/button_bg"
+        android:onClick="ingresarPedidos"
+        android:text="Ingresar Pedido"
+        android:textColor="#fafafa" />
+
+    <TextView
+        android:id="@+id/txtPedidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#DD3504"
+        android:textStyle="bold"
+        android:text="Lista de pedidos"
+        android:textAlignment="center"
+        android:padding="15dp"
+        android:textSize="25dp"/>
+
+    <ListView
+        android:id="@+id/lvpedidos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>
