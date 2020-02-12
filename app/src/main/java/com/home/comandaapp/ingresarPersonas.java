@@ -55,8 +55,6 @@ public class ingresarPersonas extends AppCompatActivity {
 
         guardar = findViewById(R.id.btnPedidos);
 
-        inicializarFirebase();
-
         lvListarPersonas = findViewById(R.id.lvDatosPersonas);
         inicializarFirebase();
         listarDatos();

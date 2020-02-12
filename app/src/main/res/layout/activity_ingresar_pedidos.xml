@@ -1,9 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ingresarPedidos">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#DD3504"
+        android:textStyle="bold"
+        android:text="Ingreso datos del  Pedido"
+        android:textAlignment="center"
+        android:paddingTop="5px"
+        android:textSize="25dp"/>
+
+    <EditText
+        android:id="@+id/edtNumeroPedido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Numero de pedido"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edtClientep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nombre del Cliente"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edtCedulaP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Cedula del cliente"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edtMenuP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Menu"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edtMesaP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Numero de Mesa"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edtExtrasP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Extras del Pedído"
+        android:inputType="textPersonName" />
+
+
+</LinearLayout>
