@@ -93,17 +93,18 @@ import com.home.comandaapp.model.Personas;
                                 Log.e("Nombre password: ", ""+fpassword);
                                 //Log.e("Datos: ", ""+snapshot.getValue());
 
+                                //ingreso(fusername, fpassword);
                                 String userF = user.getText().toString();
                                 String passF = password.getText().toString();
 
                                 if(userF.equals(fusername) && passF.equals(fpassword)){
                                     Intent pedidos =  new Intent(MainActivity.this, com.home.comandaapp.pedidos.class);
                                     //vista2.putExtra("datoUser",userF);
-                                    Toast.makeText(getApplicationContext(), "Ingreso Exitoso",Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(), "Ingreso Exitoso",Toast.LENGTH_SHORT).show();
                                     startActivity(pedidos);
                                     limpiarCajas();
                                 }else{
-                                    Toast.makeText(getApplicationContext(), "Clave equivocada",Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(), "Clave equivocada",Toast.LENGTH_SHORT).show();
                                     limpiarCajas();
                                 }
                             }
@@ -123,6 +124,23 @@ import com.home.comandaapp.model.Personas;
 
                 }
             });
+        }
+
+        public void ingreso(String fusername,String fpassword){
+
+            String userF = user.getText().toString();
+            String passF = password.getText().toString();
+
+            if(userF.equals(fusername) && passF.equals(fpassword)){
+                Intent pedidos =  new Intent(MainActivity.this, com.home.comandaapp.pedidos.class);
+                //vista2.putExtra("datoUser",userF);
+                Toast.makeText(getApplicationContext(), "Ingreso Exitoso",Toast.LENGTH_SHORT).show();
+                startActivity(pedidos);
+                limpiarCajas();
+            }else{
+                Toast.makeText(getApplicationContext(), "Clave equivocada",Toast.LENGTH_SHORT).show();
+                limpiarCajas();
+            }
         }
 
         public void limpiarCajas(){

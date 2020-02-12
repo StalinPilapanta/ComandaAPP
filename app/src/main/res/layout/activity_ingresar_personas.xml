@@ -65,15 +65,6 @@
         android:hint="Password"
         android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/btnPedidos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_bg"
-        android:onClick="guardarDatos"
-        android:text="Guardar"
-        android:textColor="#fafafa" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"

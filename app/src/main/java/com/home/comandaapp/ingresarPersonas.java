@@ -73,11 +73,23 @@ public class ingresarPersonas extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main,menu);
-        return super.onCreateOptionsMenu(menu);
+        return true;
     }
 
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
+        if(id == R.id.icon_add){
+            guardarDatos();
+            Toast.makeText( ingresarPersonas.this, "Agregado",Toast.LENGTH_SHORT).show();
+        }else if(id == R.id.icon_save){
+            Toast.makeText( ingresarPersonas.this, "Actualizar",Toast.LENGTH_SHORT).show();
+        }else if(id == R.id.icon_delete){
+            Toast.makeText( ingresarPersonas.this, "Eliminar",Toast.LENGTH_SHORT).show();
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
-    public void guardarDatos(View view){
+    public void guardarDatos(){
 
         String name = nombres.getText().toString();
         String lasName = apellidos.getText().toString();
@@ -139,10 +151,7 @@ public class ingresarPersonas extends AppCompatActivity {
         databaseReference = firebaseDatabase.getReference();
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        return super.onOptionsItemSelected(item);
-    }
+
 
     public void limpiarCajas(){
         nombres.setText("");
