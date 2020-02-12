@@ -65,5 +65,20 @@
         android:hint="Extras del Pedído"
         android:inputType="textPersonName" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#DD3504"
+        android:textStyle="bold"
+        android:text="Pedidos"
+        android:textAlignment="center"
+        android:paddingTop="5px"
+        android:textSize="25dp"/>
+
+
+    <ListView
+        android:id="@+id/lvpedidos2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>
