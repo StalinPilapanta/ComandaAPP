@@ -71,6 +71,6 @@ public class Pedidos {
 
     @Override
     public String toString() {
-        return " NumerPedido";
+        return NumerPedido + " " + menu ;
     }
 }
