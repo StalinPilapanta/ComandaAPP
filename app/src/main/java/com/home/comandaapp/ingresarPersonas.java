@@ -65,6 +65,14 @@ public class ingresarPersonas extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 personaSelected = (Personas) parent.getItemAtPosition(position);
+                ///Datos de las personas
+                nombres.setText(personaSelected.getNombre());
+                apellidos.setText(personaSelected.getApellidos());
+                cedula.setText(personaSelected.getCedula());
+                email.setText(personaSelected.getEmail());
+                username.setText(personaSelected.getUsername());
+                password.setText(personaSelected.getPassword());
+
                 Toast.makeText(getApplicationContext(), "Seleccionado",Toast.LENGTH_SHORT).show();
             }
         });
@@ -82,8 +90,10 @@ public class ingresarPersonas extends AppCompatActivity {
             guardarDatos();
             Toast.makeText( ingresarPersonas.this, "Agregado",Toast.LENGTH_SHORT).show();
         }else if(id == R.id.icon_save){
+            actualizarDatos();
             Toast.makeText( ingresarPersonas.this, "Actualizar",Toast.LENGTH_SHORT).show();
         }else if(id == R.id.icon_delete){
+            eliminarDatos();
             Toast.makeText( ingresarPersonas.this, "Eliminar",Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
@@ -122,6 +132,25 @@ public class ingresarPersonas extends AppCompatActivity {
 
     }
 
+    public void actualizarDatos(){
+        Personas p = new Personas();
+        p.setUid(personaSelected.getUid());
+        p.setNombre(nombres.getText().toString().trim());
+        p.setApellidos(apellidos.getText().toString().trim());
+        p.setCedula(cedula.getText().toString().trim());
+        p.setEmail(email.getText().toString().trim());
+        p.setUsername(username.getText().toString().trim());
+        p.setPassword(password.getText().toString().trim());
+        databaseReference.child("Personas").child(p.getUid()).setValue(p);
+        limpiarCajas();
+    }
+    public void eliminarDatos(){
+        Personas p = new Personas();
+        p.setUid(personaSelected.getUid());
+        databaseReference.child("Personas").child(p.getUid()).removeValue();
+        limpiarCajas();
+    }
+
     private void validacion() {
 
         String name = nombres.getText().toString();
@@ -144,6 +173,8 @@ public class ingresarPersonas extends AppCompatActivity {
             password.setError("Required");
         }
     }
+
+
 
     private void inicializarFirebase(){
         FirebaseApp.initializeApp(this);
